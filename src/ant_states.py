@@ -9,6 +9,6 @@ class AntStates(Enum):
     RETURNING_WITH_FOOD: Navigates using blue pheromones and lays red pheromones behind. Carrying food
     RETURNING_WITHOUT_FOOD: Navigates using red pheromones and lays no pheromones behind
     """
-    SEARCHING_FOR_FOOD = auto(),
-    RETURNING_WITH_FOOD = auto(),
-    RETURNING_WITHOUT_FOOD = auto()
+    SEARCHING_FOR_FOOD = "SEARCHING_FOR_FOOD",
+    RETURNING_WITH_FOOD = "RETURNING_WITH_FOOD",
+    RETURNING_WITHOUT_FOOD = "RETURNING_WITHOUT_FOOD"

@@ -5,12 +5,7 @@ from utils import *
 
 
 class Map:
-    def __init__(self,
-                 map_shape,
-                 n_food_sources=1,
-                 food_sigma=2,
-                 food_per_source=1000,
-                 colony_size=5):
+    def __init__(self, map_shape, n_food_sources=1, food_sigma=2, food_per_source=1000, colony_size=5):
         """
         Initialises the map
         :param map_shape: 2d array like

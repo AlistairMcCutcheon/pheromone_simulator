@@ -67,5 +67,4 @@ class Environment:
             else:
                 visual_map[ant.position[0], ant.position[1]] = np.array([0, 255, 255])
 
-        return visual_map
-
+        return visual_map.astype(np.uint8)
