@@ -26,7 +26,7 @@ class Ant:
         self.pheromone_drop_percent = 0.01
 
         # how long until the ant stops dropping pheromones. ie, time until the ant is exhausted and wants to come home
-        self.initial_pheromone_deplete_time = 50
+        self.initial_pheromone_deplete_time = 100
 
         self.pheromone_bank = self.initial_pheromone_bank
         self.pheromone_deplete_time = self.initial_pheromone_deplete_time
