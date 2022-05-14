@@ -41,13 +41,11 @@ class Environment:
         the ants that move first will leave pheromones behind which will impact the actions of the other ants
         :return: None
         """
-
         for ant in self.ants:
             ant.update_next_position()
 
         for ant in self.ants:
             ant.move_to_next_position()
-
         self.map.diffuse_pheromones(self.diffusion_rate, self.evaporation_rate)
 
     def visualise(self):

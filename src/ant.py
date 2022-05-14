@@ -64,10 +64,10 @@ class Ant:
         """
         # if the ant is not returning with food, and they are currently at food
         if not self.status == AntStates.RETURNING_WITH_FOOD and self.map.food_map[self.position[0], self.position[1]]:
-                self.map.remove_food(self.position)
-                self.status = AntStates.RETURNING_WITH_FOOD
-                self.__reset_pheromones()
-                self.__orientate()
+            self.map.remove_food(self.position)
+            self.status = AntStates.RETURNING_WITH_FOOD
+            self.__reset_pheromones()
+            self.__orientate()
         # if the ant is not searching for food, and they are inside the colony
         elif not self.status == AntStates.SEARCHING_FOR_FOOD and self.map.is_close_to_colony(self.position):
             # if the any is at the centre of the colony
@@ -91,7 +91,8 @@ class Ant:
             else:
                 sample_points = np.array([self.position + (self.direction + normal(self.direction)) / 2,
                                           self.position + self.direction,
-                                          self.position + (self.direction - normal(self.direction)) / 2], dtype=np.int16)
+                                          self.position + (self.direction - normal(self.direction)) / 2],
+                                         dtype=np.int16)
 
             pheromone_map = self.__pheromone_map()
 

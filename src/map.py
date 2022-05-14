@@ -78,12 +78,12 @@ class Map:
         """
         visual_map = np.stack((self.red_pheromone_map * 0.1, self.food_map * 10, self.blue_pheromone_map * 0.1),
                               axis=2).astype(np.uint8)
+        visual_map[visual_map > 255] = 255
 
         # impassable positions are grey
         visual_map[self.impassable_map == 1, :] = 125
         # the colony is brown
         visual_map[self.colony_map == 1] = np.array([139, 69, 19])
-
         return visual_map
 
     def diffuse_pheromones(self, diffusion_rate, evaporation_rate):
