@@ -73,6 +73,6 @@ if __name__ == "__main__":
 
     for repetition in range(1):
         for diffusion_rate in diffusion_range:
-            pool.apply_async(run_experiment, args=("experiment_1", diffusion_rate, 100))
+            pool.apply_async(run_experiment, args=("experiment_1", diffusion_rate, 20000))
     pool.close()
     pool.join()
